@@ -1,0 +1,8 @@
+[
+  { "id": "leadership", "label": "Leadership & Governance", "weight": 0.20 },
+  { "id": "anticorruption", "label": "Anti-corruption Policies", "weight": 0.20 },
+  { "id": "transparency", "label": "Transparency & Disclosure", "weight": 0.18 },
+  { "id": "whistleblower", "label": "Whistleblower Protection", "weight": 0.17 },
+  { "id": "accountability", "label": "Accountability & Oversight", "weight": 0.15 },
+  { "id": "stakeholder", "label": "Stakeholder Engagement", "weight": 0.10 }
+]

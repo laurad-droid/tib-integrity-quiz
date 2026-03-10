@@ -1,0 +1,98 @@
+{
+  "leadership": {
+    "low": [
+      "Develop and adopt a formal code of conduct for all employees and stakeholders, aligned with OECD integrity guidelines",
+      "Establish an ethics committee or appoint an integrity officer with a clear mandate and direct reporting line to senior leadership",
+      "Implement mandatory ethics and integrity training for all senior leaders and board members"
+    ],
+    "medium": [
+      "Strengthen board-level oversight of integrity programmes by establishing a dedicated governance committee with regular reporting cycles",
+      "Publish an annual ethics and integrity report detailing key metrics, incidents, and improvement actions",
+      "Conduct regular integrity culture surveys to assess employee perceptions and identify areas for improvement"
+    ],
+    "high": [
+      "Benchmark your governance framework against ISO 37001 and ISO 37002 standards to identify further refinement opportunities",
+      "Pursue external certification of your integrity management system and share best practices through peer learning networks"
+    ]
+  },
+  "anticorruption": {
+    "low": [
+      "Draft and implement a comprehensive anti-bribery and anti-corruption policy covering all forms of corruption, including facilitation payments",
+      "Establish a conflict-of-interest declaration process for all employees, with mandatory annual updates",
+      "Introduce basic corruption risk assessment procedures for high-risk business areas and geographic regions"
+    ],
+    "medium": [
+      "Implement risk-based due diligence procedures for all third parties, suppliers, and business partners with documented outcomes",
+      "Develop a centralised gifts and hospitality register with clear thresholds, approval workflows, and regular management review",
+      "Conduct sector-specific corruption risk assessments annually and integrate findings into enterprise risk management"
+    ],
+    "high": [
+      "Adopt continuous monitoring tools and data analytics to detect corruption red flags across procurement and financial transactions",
+      "Engage in collective action initiatives with industry peers and join integrity pacts for major public contracts"
+    ]
+  },
+  "transparency": {
+    "low": [
+      "Begin publishing basic financial reports and key organisational data in accessible formats on your website",
+      "Establish minimum disclosure standards for procurement processes, including publishing contract award notices",
+      "Create a public register of senior officials' interests and asset declarations"
+    ],
+    "medium": [
+      "Adopt open data standards for procurement and financial reporting to enhance comparability and public access",
+      "Publish a comprehensive annual transparency report covering governance decisions, lobbying contacts, and policy-making processes",
+      "Implement beneficial ownership disclosure requirements for all entities involved in public contracts"
+    ],
+    "high": [
+      "Deploy real-time public dashboards for procurement, budgeting, and contract execution aligned with Open Contracting Data Standards",
+      "Participate in international transparency initiatives such as the Extractive Industries Transparency Initiative or Open Government Partnership"
+    ]
+  },
+  "whistleblower": {
+    "low": [
+      "Establish at least one secure reporting channel for employees and external parties to report suspected misconduct",
+      "Develop a formal whistleblower protection policy that prohibits all forms of retaliation, in line with the EU Whistleblower Protection Directive",
+      "Designate a trained person or team responsible for receiving, assessing, and responding to whistleblower reports"
+    ],
+    "medium": [
+      "Implement multiple reporting channels including an anonymous online portal and an independent external hotline",
+      "Develop standardised investigation procedures with defined timelines, qualified investigators, and feedback mechanisms for reporters",
+      "Conduct regular training for all staff on whistleblower rights, reporting procedures, and anti-retaliation protections"
+    ],
+    "high": [
+      "Commission an independent third party to operate and audit your whistleblower reporting and investigation system",
+      "Publish anonymised aggregate data on reports received, investigations conducted, and outcomes achieved to demonstrate accountability"
+    ]
+  },
+  "accountability": {
+    "low": [
+      "Establish basic internal audit procedures for integrity and compliance programmes with regular reporting to management",
+      "Create a centralised incident register to track all integrity-related incidents, complaints, and their resolution status",
+      "Define clear disciplinary procedures for integrity violations that apply consistently regardless of seniority"
+    ],
+    "medium": [
+      "Implement a compliance monitoring programme with defined KPIs, regular assessments, and centralised tracking across all departments",
+      "Develop a formal corrective action process with root-cause analysis, assigned responsibilities, deadlines, and effectiveness verification",
+      "Commission periodic external audits or peer reviews of your integrity management system"
+    ],
+    "high": [
+      "Deploy an integrated compliance management system with automated monitoring, real-time dashboards, and predictive analytics for risk identification",
+      "Establish a continuous improvement framework that systematically captures lessons learned and feeds them back into policy and programme updates"
+    ]
+  },
+  "stakeholder": {
+    "low": [
+      "Establish basic feedback mechanisms such as surveys or suggestion boxes to collect input from citizens and service users on integrity matters",
+      "Initiate contact with relevant civil society organisations and anti-corruption watchdog bodies to explore potential collaboration",
+      "Publish information about public consultation opportunities and how stakeholders can participate in governance processes"
+    ],
+    "medium": [
+      "Develop structured public consultation processes with documented responses to stakeholder input and published outcomes",
+      "Create formal partnerships with at least two civil society organisations or academic institutions focused on governance and integrity",
+      "Implement targeted outreach programmes to ensure participation of underrepresented communities in integrity-related decision-making"
+    ],
+    "high": [
+      "Establish multi-stakeholder governance bodies such as citizen advisory panels or integrity co-design forums with meaningful decision-making influence",
+      "Develop and publish an annual stakeholder engagement report with measurable impact indicators and independent evaluation of engagement quality"
+    ]
+  }
+}

@@ -1,0 +1,428 @@
+[
+  {
+    "id": "ldr-01",
+    "dimension": "leadership",
+    "type": "likert",
+    "text": "Our organisation has a clearly articulated code of conduct that is regularly communicated to all employees and stakeholders.",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "Strongly Disagree", "value": 1, "points": 0 },
+      { "label": "Disagree", "value": 2, "points": 2 },
+      { "label": "Neutral", "value": 3, "points": 5 },
+      { "label": "Agree", "value": 4, "points": 8 },
+      { "label": "Strongly Agree", "value": 5, "points": 10 }
+    ]
+  },
+  {
+    "id": "ldr-02",
+    "dimension": "leadership",
+    "type": "likert",
+    "text": "Senior leadership consistently demonstrates commitment to ethical behaviour and sets a visible 'tone from the top' on integrity matters.",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "Strongly Disagree", "value": 1, "points": 0 },
+      { "label": "Disagree", "value": 2, "points": 2 },
+      { "label": "Neutral", "value": 3, "points": 5 },
+      { "label": "Agree", "value": 4, "points": 8 },
+      { "label": "Strongly Agree", "value": 5, "points": 10 }
+    ]
+  },
+  {
+    "id": "ldr-03",
+    "dimension": "leadership",
+    "type": "scenario",
+    "text": "How does your organisation handle ethical leadership training for board members and senior executives?",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "No formal ethics training exists for leadership", "value": 0, "points": 0 },
+      { "label": "Ad-hoc training is available but not mandatory", "value": 1, "points": 3 },
+      { "label": "Annual mandatory ethics training is provided to all senior leaders", "value": 2, "points": 7 },
+      { "label": "Comprehensive, ongoing ethics training is embedded in leadership development with measurable outcomes", "value": 3, "points": 10 }
+    ]
+  },
+  {
+    "id": "ldr-04",
+    "dimension": "leadership",
+    "type": "scenario",
+    "text": "What role does the board or governing body play in overseeing your organisation's integrity programme?",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "The board has no formal role in integrity oversight", "value": 0, "points": 0 },
+      { "label": "The board receives occasional reports on integrity issues", "value": 1, "points": 3 },
+      { "label": "A dedicated board committee reviews integrity matters on a quarterly basis", "value": 2, "points": 7 },
+      { "label": "The board actively governs the integrity programme with dedicated resources, regular reporting, and strategic integration", "value": 3, "points": 10 }
+    ]
+  },
+  {
+    "id": "ldr-05",
+    "dimension": "leadership",
+    "type": "yes_partial_no",
+    "text": "Does your organisation have a formally established ethics committee or integrity officer with a clear mandate and reporting line to senior leadership?",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "No", "value": 0, "points": 0 },
+      { "label": "Partially", "value": 1, "points": 5 },
+      { "label": "Yes", "value": 2, "points": 10 }
+    ]
+  },
+  {
+    "id": "acr-01",
+    "dimension": "anticorruption",
+    "type": "likert",
+    "text": "Our organisation has a comprehensive anti-bribery and anti-corruption policy that covers all forms of corruption, including facilitation payments and political contributions.",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "Strongly Disagree", "value": 1, "points": 0 },
+      { "label": "Disagree", "value": 2, "points": 2 },
+      { "label": "Neutral", "value": 3, "points": 5 },
+      { "label": "Agree", "value": 4, "points": 8 },
+      { "label": "Strongly Agree", "value": 5, "points": 10 }
+    ]
+  },
+  {
+    "id": "acr-02",
+    "dimension": "anticorruption",
+    "type": "likert",
+    "text": "All employees are required to complete regular conflict-of-interest declarations and are aware of the procedures for reporting potential conflicts.",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "Strongly Disagree", "value": 1, "points": 0 },
+      { "label": "Disagree", "value": 2, "points": 2 },
+      { "label": "Neutral", "value": 3, "points": 5 },
+      { "label": "Agree", "value": 4, "points": 8 },
+      { "label": "Strongly Agree", "value": 5, "points": 10 }
+    ]
+  },
+  {
+    "id": "acr-03",
+    "dimension": "anticorruption",
+    "type": "scenario",
+    "text": "How does your organisation conduct corruption risk assessments?",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "No corruption risk assessment process exists", "value": 0, "points": 0 },
+      { "label": "Risk assessments are conducted informally or only when required by regulators", "value": 1, "points": 3 },
+      { "label": "Systematic risk assessments are performed annually and cover key business areas", "value": 2, "points": 7 },
+      { "label": "Continuous, data-driven corruption risk assessments are integrated into enterprise risk management with clear mitigation plans", "value": 3, "points": 10 }
+    ]
+  },
+  {
+    "id": "acr-04",
+    "dimension": "anticorruption",
+    "type": "scenario",
+    "text": "What due diligence procedures does your organisation apply to third parties, business partners, and suppliers?",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "No formal due diligence process for third parties", "value": 0, "points": 0 },
+      { "label": "Basic background checks are performed for major contracts only", "value": 1, "points": 3 },
+      { "label": "Standardised due diligence is applied to all significant third-party relationships with documented procedures", "value": 2, "points": 7 },
+      { "label": "Risk-based enhanced due diligence programme with ongoing monitoring, red-flag escalation, and contractual anti-corruption clauses", "value": 3, "points": 10 }
+    ]
+  },
+  {
+    "id": "acr-05",
+    "dimension": "anticorruption",
+    "type": "yes_partial_no",
+    "text": "Does your organisation maintain a clear policy on gifts, hospitality, and entertainment with defined thresholds, approval processes, and a centralised register?",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "No", "value": 0, "points": 0 },
+      { "label": "Partially", "value": 1, "points": 5 },
+      { "label": "Yes", "value": 2, "points": 10 }
+    ]
+  },
+  {
+    "id": "trn-01",
+    "dimension": "transparency",
+    "type": "likert",
+    "text": "Our organisation proactively publishes financial statements, procurement data, and key performance indicators in accessible formats for public scrutiny.",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "Strongly Disagree", "value": 1, "points": 0 },
+      { "label": "Disagree", "value": 2, "points": 2 },
+      { "label": "Neutral", "value": 3, "points": 5 },
+      { "label": "Agree", "value": 4, "points": 8 },
+      { "label": "Strongly Agree", "value": 5, "points": 10 }
+    ]
+  },
+  {
+    "id": "trn-02",
+    "dimension": "transparency",
+    "type": "likert",
+    "text": "Information about the organisation's decision-making processes, including policy development and regulatory actions, is made available to the public in a timely manner.",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "Strongly Disagree", "value": 1, "points": 0 },
+      { "label": "Disagree", "value": 2, "points": 2 },
+      { "label": "Neutral", "value": 3, "points": 5 },
+      { "label": "Agree", "value": 4, "points": 8 },
+      { "label": "Strongly Agree", "value": 5, "points": 10 }
+    ]
+  },
+  {
+    "id": "trn-03",
+    "dimension": "transparency",
+    "type": "scenario",
+    "text": "How does your organisation handle beneficial ownership transparency and disclosure of related-party transactions?",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "No formal disclosure requirements or processes exist", "value": 0, "points": 0 },
+      { "label": "Basic disclosures are made when legally required but not proactively", "value": 1, "points": 3 },
+      { "label": "Comprehensive beneficial ownership information and related-party transactions are regularly disclosed in public reports", "value": 2, "points": 7 },
+      { "label": "Full transparency with real-time access to beneficial ownership registries, proactive disclosure exceeding legal requirements, and open-data formats", "value": 3, "points": 10 }
+    ]
+  },
+  {
+    "id": "trn-04",
+    "dimension": "transparency",
+    "type": "scenario",
+    "text": "What level of transparency does your organisation maintain in its procurement and contracting processes?",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "Procurement processes are largely opaque with limited documentation", "value": 0, "points": 0 },
+      { "label": "Major procurements follow formal procedures but details are not routinely published", "value": 1, "points": 3 },
+      { "label": "All significant contracts are publicly tendered with results and award criteria published", "value": 2, "points": 7 },
+      { "label": "End-to-end procurement transparency with open contracting data standards, published contracts, and real-time monitoring dashboards", "value": 3, "points": 10 }
+    ]
+  },
+  {
+    "id": "trn-05",
+    "dimension": "transparency",
+    "type": "yes_partial_no",
+    "text": "Does your organisation publish an annual public integrity or transparency report that includes key metrics, identified risks, and improvement actions?",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "No", "value": 0, "points": 0 },
+      { "label": "Partially", "value": 1, "points": 5 },
+      { "label": "Yes", "value": 2, "points": 10 }
+    ]
+  },
+  {
+    "id": "wbl-01",
+    "dimension": "whistleblower",
+    "type": "likert",
+    "text": "Our organisation provides multiple accessible channels (e.g., hotline, online portal, ombudsperson) for employees and external parties to report suspected misconduct.",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "Strongly Disagree", "value": 1, "points": 0 },
+      { "label": "Disagree", "value": 2, "points": 2 },
+      { "label": "Neutral", "value": 3, "points": 5 },
+      { "label": "Agree", "value": 4, "points": 8 },
+      { "label": "Strongly Agree", "value": 5, "points": 10 }
+    ]
+  },
+  {
+    "id": "wbl-02",
+    "dimension": "whistleblower",
+    "type": "likert",
+    "text": "Employees trust that they can report integrity concerns without fear of retaliation, and our anti-retaliation protections are well-communicated and enforced.",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "Strongly Disagree", "value": 1, "points": 0 },
+      { "label": "Disagree", "value": 2, "points": 2 },
+      { "label": "Neutral", "value": 3, "points": 5 },
+      { "label": "Agree", "value": 4, "points": 8 },
+      { "label": "Strongly Agree", "value": 5, "points": 10 }
+    ]
+  },
+  {
+    "id": "wbl-03",
+    "dimension": "whistleblower",
+    "type": "scenario",
+    "text": "How does your organisation handle anonymous reports and protect the identity of whistleblowers?",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "Anonymous reporting is not available and reporter identities are not protected", "value": 0, "points": 0 },
+      { "label": "Anonymous reporting is possible but there is no formal confidentiality protocol", "value": 1, "points": 3 },
+      { "label": "Dedicated anonymous reporting channels exist with documented confidentiality procedures", "value": 2, "points": 7 },
+      { "label": "Robust anonymous and confidential reporting system operated by an independent third party with strict data protection safeguards and regular audits", "value": 3, "points": 10 }
+    ]
+  },
+  {
+    "id": "wbl-04",
+    "dimension": "whistleblower",
+    "type": "scenario",
+    "text": "What investigation procedures follow when a whistleblower report is received?",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "No formal investigation procedures are in place", "value": 0, "points": 0 },
+      { "label": "Investigations are conducted but lack standardised procedures and timelines", "value": 1, "points": 3 },
+      { "label": "A documented investigation process exists with defined timelines, qualified investigators, and feedback to reporters", "value": 2, "points": 7 },
+      { "label": "Independent, professionally managed investigations with legal oversight, defined escalation paths, outcome tracking, and systematic reporting to governance bodies", "value": 3, "points": 10 }
+    ]
+  },
+  {
+    "id": "wbl-05",
+    "dimension": "whistleblower",
+    "type": "yes_partial_no",
+    "text": "Does your organisation provide regular training to all staff on whistleblower rights, reporting procedures, and the EU Whistleblower Protection Directive requirements?",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "No", "value": 0, "points": 0 },
+      { "label": "Partially", "value": 1, "points": 5 },
+      { "label": "Yes", "value": 2, "points": 10 }
+    ]
+  },
+  {
+    "id": "acc-01",
+    "dimension": "accountability",
+    "type": "likert",
+    "text": "Our organisation conducts regular internal and external audits of its integrity and compliance programmes, with findings reported to senior management and governing bodies.",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "Strongly Disagree", "value": 1, "points": 0 },
+      { "label": "Disagree", "value": 2, "points": 2 },
+      { "label": "Neutral", "value": 3, "points": 5 },
+      { "label": "Agree", "value": 4, "points": 8 },
+      { "label": "Strongly Agree", "value": 5, "points": 10 }
+    ]
+  },
+  {
+    "id": "acc-02",
+    "dimension": "accountability",
+    "type": "likert",
+    "text": "Clear disciplinary procedures are in place and consistently applied when integrity violations are confirmed, regardless of the seniority of the person involved.",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "Strongly Disagree", "value": 1, "points": 0 },
+      { "label": "Disagree", "value": 2, "points": 2 },
+      { "label": "Neutral", "value": 3, "points": 5 },
+      { "label": "Agree", "value": 4, "points": 8 },
+      { "label": "Strongly Agree", "value": 5, "points": 10 }
+    ]
+  },
+  {
+    "id": "acc-03",
+    "dimension": "accountability",
+    "type": "scenario",
+    "text": "How does your organisation monitor and track compliance with its integrity policies across departments and subsidiaries?",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "No systematic compliance monitoring exists", "value": 0, "points": 0 },
+      { "label": "Periodic spot-checks are conducted but there is no centralised tracking system", "value": 1, "points": 3 },
+      { "label": "A compliance monitoring programme with regular assessments, KPIs, and centralised incident tracking is operational", "value": 2, "points": 7 },
+      { "label": "Integrated compliance management system with real-time dashboards, automated alerts, root-cause analysis, and continuous improvement cycles", "value": 3, "points": 10 }
+    ]
+  },
+  {
+    "id": "acc-04",
+    "dimension": "accountability",
+    "type": "scenario",
+    "text": "When an integrity incident is identified, how does your organisation ensure corrective actions are implemented and their effectiveness verified?",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "Corrective actions are not systematically tracked or followed up", "value": 0, "points": 0 },
+      { "label": "Actions are documented but follow-up depends on individual managers", "value": 1, "points": 3 },
+      { "label": "A formal corrective action process exists with assigned responsibilities, deadlines, and management review", "value": 2, "points": 7 },
+      { "label": "Comprehensive corrective action framework with root-cause analysis, effectiveness verification, lessons-learned integration, and governance-level reporting", "value": 3, "points": 10 }
+    ]
+  },
+  {
+    "id": "acc-05",
+    "dimension": "accountability",
+    "type": "yes_partial_no",
+    "text": "Does your organisation maintain a centralised register of all integrity incidents, audit findings, and corrective actions that is reviewed by senior management at least quarterly?",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "No", "value": 0, "points": 0 },
+      { "label": "Partially", "value": 1, "points": 5 },
+      { "label": "Yes", "value": 2, "points": 10 }
+    ]
+  },
+  {
+    "id": "stk-01",
+    "dimension": "stakeholder",
+    "type": "likert",
+    "text": "Our organisation actively engages with civil society organisations, academic institutions, and community groups in the design and review of its integrity policies.",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "Strongly Disagree", "value": 1, "points": 0 },
+      { "label": "Disagree", "value": 2, "points": 2 },
+      { "label": "Neutral", "value": 3, "points": 5 },
+      { "label": "Agree", "value": 4, "points": 8 },
+      { "label": "Strongly Agree", "value": 5, "points": 10 }
+    ]
+  },
+  {
+    "id": "stk-02",
+    "dimension": "stakeholder",
+    "type": "likert",
+    "text": "Feedback from citizens, service users, and external stakeholders is systematically collected and used to improve the organisation's integrity practices.",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "Strongly Disagree", "value": 1, "points": 0 },
+      { "label": "Disagree", "value": 2, "points": 2 },
+      { "label": "Neutral", "value": 3, "points": 5 },
+      { "label": "Agree", "value": 4, "points": 8 },
+      { "label": "Strongly Agree", "value": 5, "points": 10 }
+    ]
+  },
+  {
+    "id": "stk-03",
+    "dimension": "stakeholder",
+    "type": "scenario",
+    "text": "How does your organisation involve stakeholders in public consultation processes related to governance and integrity?",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "No public consultation processes exist", "value": 0, "points": 0 },
+      { "label": "Consultations occur only when legally mandated with minimal outreach", "value": 1, "points": 3 },
+      { "label": "Regular public consultations are conducted with documented responses to stakeholder input", "value": 2, "points": 7 },
+      { "label": "Proactive, inclusive multi-stakeholder consultation processes with published feedback, impact assessments, and participatory decision-making mechanisms", "value": 3, "points": 10 }
+    ]
+  },
+  {
+    "id": "stk-04",
+    "dimension": "stakeholder",
+    "type": "scenario",
+    "text": "What mechanisms does your organisation use to ensure meaningful participation of diverse communities in integrity-related decision-making?",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "No mechanisms for community participation in integrity matters", "value": 0, "points": 0 },
+      { "label": "Occasional community meetings or surveys are held but results are not systematically integrated", "value": 1, "points": 3 },
+      { "label": "Structured participation programmes exist with targeted outreach to underrepresented groups and published outcomes", "value": 2, "points": 7 },
+      { "label": "Comprehensive participatory governance framework with citizen panels, co-design processes, accessibility measures, and transparent reporting on how input shaped decisions", "value": 3, "points": 10 }
+    ]
+  },
+  {
+    "id": "stk-05",
+    "dimension": "stakeholder",
+    "type": "yes_partial_no",
+    "text": "Does your organisation maintain formal partnerships with civil society organisations or independent watchdog bodies to monitor and strengthen its integrity practices?",
+    "maxPoints": 10,
+    "weight": 1.0,
+    "options": [
+      { "label": "No", "value": 0, "points": 0 },
+      { "label": "Partially", "value": 1, "points": 5 },
+      { "label": "Yes", "value": 2, "points": 10 }
+    ]
+  }
+]

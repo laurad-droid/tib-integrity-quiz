@@ -1,0 +1,109 @@
+'use client';
+
+import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
+import Link from 'next/link';
+import { login } from '../actions';
+
+function LoginForm() {
+  const searchParams = useSearchParams();
+  const error = searchParams.get('error');
+
+  return (
+    <div className="min-h-screen bg-ti-bg flex items-center justify-center px-4">
+      <div className="w-full max-w-md">
+        <div className="bg-white rounded-lg shadow-md p-8">
+          {/* Logo / Brand Area */}
+          <div className="text-center mb-8">
+            <h1 className="text-2xl font-bold text-ti-navy">
+              Transparency International Belgium
+            </h1>
+            <p className="text-ti-gray mt-2 text-sm">
+              Integrity Self-Assessment Tool
+            </p>
+          </div>
+
+          <h2 className="text-xl font-semibold text-ti-navy mb-6 text-center">
+            Sign In
+          </h2>
+
+          {/* Error Message */}
+          {error && (
+            <div className="mb-4 p-3 rounded bg-red-50 border border-red-200 text-red-700 text-sm">
+              {error}
+            </div>
+          )}
+
+          {/* Login Form */}
+          <form action={login} className="space-y-4">
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-ti-navy mb-1"
+              >
+                Email Address
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-ti-accent focus:border-transparent"
+                placeholder="you@organization.com"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium text-ti-navy mb-1"
+              >
+                Password
+              </label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                required
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-ti-accent focus:border-transparent"
+                placeholder="Enter your password"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-ti-yellow text-ti-navy font-semibold py-2 px-4 rounded-md hover:bg-yellow-400 transition-colors focus:outline-none focus:ring-2 focus:ring-ti-accent focus:ring-offset-2"
+            >
+              Sign In
+            </button>
+          </form>
+
+          {/* Registration Link */}
+          <p className="mt-6 text-center text-sm text-ti-gray">
+            Don&apos;t have an account?{' '}
+            <Link
+              href="/auth/register"
+              className="text-ti-accent font-medium hover:underline"
+            >
+              Register here
+            </Link>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-ti-bg flex items-center justify-center">
+          <div className="text-ti-gray">Loading...</div>
+        </div>
+      }
+    >
+      <LoginForm />
+    </Suspense>
+  );
+}

@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build
+.next/
+out/
+dist/
+
+# IDE & OS
+.claude/
+.DS_Store
+*.swp
+
+# Research PDFs (reference materials, not source code)
+*.pdf
+
+# Vercel
+.vercel

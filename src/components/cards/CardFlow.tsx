@@ -21,6 +21,7 @@ export default function CardFlow() {
   const [currentIndex, setCurrentIndex] = useState(-1);
   const [answers, setAnswers] = useState<Record<string, Answer>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const totalQuestions = questions.length;
   const isWelcome = currentIndex === -1;
@@ -49,18 +50,34 @@ export default function CardFlow() {
 
   const handleSubmit = async () => {
     setIsSubmitting(true);
+    setError(null);
     try {
       const response = await fetch('/api/assessments', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ answers: Object.values(answers) }),
       });
-      const data = await response.json();
-      if (data.assessmentId) {
-        window.location.href = '/results/' + data.assessmentId;
+
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.error || 'Failed to submit assessment');
       }
-    } catch (error) {
-      console.error('Failed to submit assessment:', error);
+
+      const data = await response.json();
+
+      if (data.assessmentId) {
+        // Logged-in user: redirect to saved results page
+        window.location.href = '/results/' + data.assessmentId;
+      } else if (data.anonymous && data.result) {
+        // Anonymous user: store results in sessionStorage and redirect to anonymous results
+        sessionStorage.setItem('anonymousResult', JSON.stringify(data.result));
+        window.location.href = '/results/anonymous';
+      } else {
+        throw new Error('Unexpected response from server');
+      }
+    } catch (err) {
+      console.error('Failed to submit assessment:', err);
+      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
       setIsSubmitting(false);
     }
   };
@@ -74,6 +91,11 @@ export default function CardFlow() {
           <p className="text-ti-gray mb-6">
             You have answered all {totalQuestions} questions. Click below to see your results.
           </p>
+          {error && (
+            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-4">
+              {error}
+            </div>
+          )}
           <button
             onClick={handleSubmit}
             disabled={isSubmitting}

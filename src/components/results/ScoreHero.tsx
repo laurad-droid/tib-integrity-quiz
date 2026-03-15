@@ -56,8 +56,8 @@ export default function ScoreHero({ score }: ScoreHeroProps) {
   }, [score]);
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
-      <p className="text-ti-gray text-sm uppercase tracking-widest mb-4">
+    <div className="bg-white dark:bg-ti-dark-card rounded-[4px] border border-ti-grey-mid dark:border-ti-dark-border shadow-lg p-8 text-center">
+      <p className="text-ti-text-muted dark:text-ti-dark-muted text-sm uppercase tracking-widest mb-4">
         Your Integrity Score
       </p>
       <div className="relative inline-flex items-center justify-center mb-4">
@@ -69,7 +69,7 @@ export default function ScoreHero({ score }: ScoreHeroProps) {
           </span>
         </div>
       </div>
-      <p className="text-sm text-ti-gray mb-1">out of 100</p>
+      <p className="text-sm text-ti-text-muted dark:text-ti-dark-muted mb-1">out of 100</p>
       <p className={`text-lg font-semibold ${getScoreColor(score)}`}>
         {getScoreLabel(score)}
       </p>

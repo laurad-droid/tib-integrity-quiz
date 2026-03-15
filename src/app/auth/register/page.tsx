@@ -11,20 +11,20 @@ function RegisterForm() {
   const success = searchParams.get('success');
 
   return (
-    <div className="min-h-screen bg-ti-bg flex items-center justify-center px-4">
+    <div className="min-h-screen bg-ti-bg dark:bg-ti-dark-bg flex items-center justify-center px-4">
       <div className="w-full max-w-md">
-        <div className="bg-white rounded-lg shadow-md p-8">
+        <div className="bg-white dark:bg-ti-dark-card rounded-[4px] border border-ti-grey-mid dark:border-ti-dark-border shadow-md p-8">
           {/* Logo / Brand Area */}
           <div className="text-center mb-8">
-            <h1 className="text-2xl font-bold text-ti-navy">
+            <h1 className="text-2xl font-bold font-heading text-ti-navy dark:text-ti-dark-text">
               Transparency International Belgium
             </h1>
-            <p className="text-ti-gray mt-2 text-sm">
+            <p className="text-ti-text-muted dark:text-ti-dark-muted mt-2 text-sm">
               Integrity Self-Assessment Tool
             </p>
           </div>
 
-          <h2 className="text-xl font-semibold text-ti-navy mb-6 text-center">
+          <h2 className="text-xl font-semibold font-heading text-ti-navy dark:text-ti-dark-text mb-6 text-center">
             Create Account
           </h2>
 
@@ -49,7 +49,7 @@ function RegisterForm() {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-ti-navy mb-1"
+                  className="block text-sm font-medium text-ti-navy dark:text-ti-dark-text mb-1"
                 >
                   Email Address
                 </label>
@@ -58,7 +58,7 @@ function RegisterForm() {
                   name="email"
                   type="email"
                   required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-ti-accent focus:border-transparent"
+                  className="w-full px-3 py-2 border border-ti-grey-mid dark:border-ti-dark-border rounded-[4px] focus:outline-none focus:ring-2 focus:ring-ti-red focus:border-transparent bg-white dark:bg-ti-dark-bg dark:text-ti-dark-text"
                   placeholder="you@organization.com"
                 />
               </div>
@@ -66,7 +66,7 @@ function RegisterForm() {
               <div>
                 <label
                   htmlFor="password"
-                  className="block text-sm font-medium text-ti-navy mb-1"
+                  className="block text-sm font-medium text-ti-navy dark:text-ti-dark-text mb-1"
                 >
                   Password
                 </label>
@@ -76,7 +76,7 @@ function RegisterForm() {
                   type="password"
                   required
                   minLength={6}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-ti-accent focus:border-transparent"
+                  className="w-full px-3 py-2 border border-ti-grey-mid dark:border-ti-dark-border rounded-[4px] focus:outline-none focus:ring-2 focus:ring-ti-red focus:border-transparent bg-white dark:bg-ti-dark-bg dark:text-ti-dark-text"
                   placeholder="Minimum 6 characters"
                 />
               </div>
@@ -84,7 +84,7 @@ function RegisterForm() {
               <div>
                 <label
                   htmlFor="organization_name"
-                  className="block text-sm font-medium text-ti-navy mb-1"
+                  className="block text-sm font-medium text-ti-navy dark:text-ti-dark-text mb-1"
                 >
                   Organisation Name
                 </label>
@@ -93,7 +93,7 @@ function RegisterForm() {
                   name="organization_name"
                   type="text"
                   required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-ti-accent focus:border-transparent"
+                  className="w-full px-3 py-2 border border-ti-grey-mid dark:border-ti-dark-border rounded-[4px] focus:outline-none focus:ring-2 focus:ring-ti-red focus:border-transparent bg-white dark:bg-ti-dark-bg dark:text-ti-dark-text"
                   placeholder="Your organisation"
                 />
               </div>
@@ -101,7 +101,7 @@ function RegisterForm() {
               <div>
                 <label
                   htmlFor="sector"
-                  className="block text-sm font-medium text-ti-navy mb-1"
+                  className="block text-sm font-medium text-ti-navy dark:text-ti-dark-text mb-1"
                 >
                   Sector
                 </label>
@@ -110,7 +110,7 @@ function RegisterForm() {
                   name="sector"
                   required
                   defaultValue=""
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-ti-accent focus:border-transparent bg-white"
+                  className="w-full px-3 py-2 border border-ti-grey-mid dark:border-ti-dark-border rounded-[4px] focus:outline-none focus:ring-2 focus:ring-ti-red focus:border-transparent bg-white dark:bg-ti-dark-bg dark:text-ti-dark-text"
                 >
                   <option value="" disabled>
                     Select your sector
@@ -123,7 +123,7 @@ function RegisterForm() {
 
               <button
                 type="submit"
-                className="w-full bg-ti-yellow text-ti-navy font-semibold py-2 px-4 rounded-md hover:bg-yellow-400 transition-colors focus:outline-none focus:ring-2 focus:ring-ti-accent focus:ring-offset-2"
+                className="w-full bg-ti-red hover:bg-ti-red-dark text-white font-bold uppercase tracking-wide py-2 px-4 rounded-[4px] transition-colors focus:outline-none focus:ring-2 focus:ring-ti-red focus:ring-offset-2"
               >
                 Register
               </button>
@@ -131,11 +131,11 @@ function RegisterForm() {
           )}
 
           {/* Login Link */}
-          <p className="mt-6 text-center text-sm text-ti-gray">
+          <p className="mt-6 text-center text-sm text-ti-text-muted dark:text-ti-dark-muted">
             Already have an account?{' '}
             <Link
               href="/auth/login"
-              className="text-ti-accent font-medium hover:underline"
+              className="text-ti-red dark:text-ti-navy-light font-medium hover:underline"
             >
               Sign in here
             </Link>
@@ -150,8 +150,8 @@ export default function RegisterPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen bg-ti-bg flex items-center justify-center">
-          <div className="text-ti-gray">Loading...</div>
+        <div className="min-h-screen bg-ti-bg dark:bg-ti-dark-bg flex items-center justify-center">
+          <div className="text-ti-text-muted dark:text-ti-dark-muted">Loading...</div>
         </div>
       }
     >

@@ -10,7 +10,7 @@ const BAR_COLORS: Record<string, string> = { "0-39": "bg-score-red", "40-59": "b
 const RANGE_LABELS: Record<string, string> = { "0-39": "Needs Attention (0-39)", "40-59": "Developing (40-59)", "60-74": "Good (60-74)", "75-100": "Strong (75-100)" };
 const SECTOR_LABELS: Record<string, string> = { government: "Government", private: "Private Sector", ngo: "NGO / Civil Society" };
 
-function getBarColor(r: string): string { return BAR_COLORS[r] || 'bg-ti-gray'; }
+function getBarColor(r: string): string { return BAR_COLORS[r] || 'bg-ti-text-muted'; }
 function getRangeLabel(r: string): string { return RANGE_LABELS[r] || r; }
 function getSectorLabel(s: string): string { return SECTOR_LABELS[s] || s.charAt(0).toUpperCase() + s.slice(1); }
 
@@ -38,70 +38,70 @@ export default async function AdminPage() {
   const sectorAvgs: SectorAverage[] = Object.entries(sData).map(([sector, d]) => ({ sector, averageScore: Math.round(d.ts / d.c), count: d.c }));
 
   return (
-    <div className="min-h-screen bg-ti-bg">
+    <div className="min-h-screen bg-ti-bg dark:bg-ti-dark-bg">
       <Header />
       <main className="max-w-6xl mx-auto px-4 py-8">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="text-3xl font-bold text-ti-navy">Admin Dashboard</h1>
-            <p className="text-ti-gray mt-1">Aggregate analytics across all assessments</p>
+            <h1 className="text-3xl font-bold font-heading text-ti-navy dark:text-ti-dark-text">Admin Dashboard</h1>
+            <p className="text-ti-text-muted dark:text-ti-dark-muted mt-1">Aggregate analytics across all assessments</p>
           </div>
-          <Link href="/api/admin/export" className="bg-ti-yellow text-ti-navy font-semibold py-2 px-6 rounded-lg hover:opacity-90 transition-opacity text-sm">Export CSV</Link>
+          <Link href="/api/admin/export" className="bg-ti-red hover:bg-ti-red-dark text-white font-bold uppercase tracking-wide py-2 px-6 rounded-[4px] transition-colors text-sm">Export CSV</Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-            <p className="text-sm text-ti-gray font-medium">Total Assessments</p>
-            <p className="text-4xl font-bold text-ti-navy mt-2">{total}</p>
+          <div className="bg-white dark:bg-ti-dark-card rounded-[4px] shadow-sm border border-ti-grey-mid dark:border-ti-dark-border p-6">
+            <p className="text-sm text-ti-text-muted dark:text-ti-dark-muted font-medium">Total Assessments</p>
+            <p className="text-4xl font-bold text-ti-navy dark:text-ti-dark-text mt-2">{total}</p>
           </div>
-          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-            <p className="text-sm text-ti-gray font-medium">Average Score</p>
-            <p className="text-4xl font-bold text-ti-navy mt-2">{avg}<span className="text-lg text-ti-gray font-normal">/100</span></p>
+          <div className="bg-white dark:bg-ti-dark-card rounded-[4px] shadow-sm border border-ti-grey-mid dark:border-ti-dark-border p-6">
+            <p className="text-sm text-ti-text-muted dark:text-ti-dark-muted font-medium">Average Score</p>
+            <p className="text-4xl font-bold text-ti-navy dark:text-ti-dark-text mt-2">{avg}<span className="text-lg text-ti-text-muted dark:text-ti-dark-muted font-normal">/100</span></p>
           </div>
-          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-            <p className="text-sm text-ti-gray font-medium">Belgium CPI 2025</p>
-            <p className="text-4xl font-bold text-ti-accent mt-2">69<span className="text-lg text-ti-gray font-normal">/100</span></p>
-            <p className="text-xs text-ti-gray mt-1">Corruption Perceptions Index</p>
+          <div className="bg-white dark:bg-ti-dark-card rounded-[4px] shadow-sm border border-ti-grey-mid dark:border-ti-dark-border p-6">
+            <p className="text-sm text-ti-text-muted dark:text-ti-dark-muted font-medium">Belgium CPI 2025</p>
+            <p className="text-4xl font-bold text-ti-red dark:text-ti-navy-light mt-2">69<span className="text-lg text-ti-text-muted dark:text-ti-dark-muted font-normal">/100</span></p>
+            <p className="text-xs text-ti-text-muted dark:text-ti-dark-muted mt-1">Corruption Perceptions Index</p>
           </div>
         </div>
-        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-10">
-          <h2 className="text-xl font-semibold text-ti-navy mb-6">Score Distribution</h2>
-          {total === 0 ? (<p className="text-ti-gray text-center py-8">No assessments completed yet.</p>) : (
+        <div className="bg-white dark:bg-ti-dark-card rounded-[4px] shadow-sm border border-ti-grey-mid dark:border-ti-dark-border p-6 mb-10">
+          <h2 className="text-xl font-semibold font-heading text-ti-navy dark:text-ti-dark-text mb-6">Score Distribution</h2>
+          {total === 0 ? (<p className="text-ti-text-muted dark:text-ti-dark-muted text-center py-8">No assessments completed yet.</p>) : (
             <div className="space-y-4">
               {scoreDist.map((item) => {
                 const bw = Math.max((item.count / maxC) * 100, item.count > 0 ? 12 : 0);
                 return (
                   <div key={item.range} className="flex items-center gap-4">
-                    <div className="w-40 text-sm text-ti-gray flex-shrink-0">{getRangeLabel(item.range)}</div>
-                    <div className="flex-1 bg-gray-100 rounded-full h-8 overflow-hidden">
+                    <div className="w-40 text-sm text-ti-text-muted dark:text-ti-dark-muted flex-shrink-0">{getRangeLabel(item.range)}</div>
+                    <div className="flex-1 bg-gray-100 dark:bg-ti-dark-bg rounded-full h-8 overflow-hidden">
                       <div className={`h-full rounded-full transition-all duration-500 flex items-center justify-end pr-3 ${getBarColor(item.range)}`} style={{ width: bw + '%' }}>
                         {item.count > 0 && <span className="text-white text-xs font-bold">{item.count}</span>}
                       </div>
                     </div>
-                    <div className="w-12 text-right text-sm font-medium text-ti-navy">{item.count}</div>
+                    <div className="w-12 text-right text-sm font-medium text-ti-navy dark:text-ti-dark-text">{item.count}</div>
                   </div>
                 );
               })}
             </div>
           )}
         </div>
-        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-          <h2 className="text-xl font-semibold text-ti-navy mb-6">Average Score by Sector</h2>
-          {sectorAvgs.length === 0 ? (<p className="text-ti-gray text-center py-8">No sector data available yet.</p>) : (
+        <div className="bg-white dark:bg-ti-dark-card rounded-[4px] shadow-sm border border-ti-grey-mid dark:border-ti-dark-border p-6">
+          <h2 className="text-xl font-semibold font-heading text-ti-navy dark:text-ti-dark-text mb-6">Average Score by Sector</h2>
+          {sectorAvgs.length === 0 ? (<p className="text-ti-text-muted dark:text-ti-dark-muted text-center py-8">No sector data available yet.</p>) : (
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b border-gray-200">
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-ti-navy">Sector</th>
-                    <th className="text-right py-3 px-4 text-sm font-semibold text-ti-navy">Assessments</th>
-                    <th className="text-right py-3 px-4 text-sm font-semibold text-ti-navy">Avg Score</th>
+                  <tr className="border-b border-ti-grey-mid dark:border-ti-dark-border">
+                    <th className="text-left py-3 px-4 text-sm font-semibold text-ti-navy dark:text-ti-dark-text">Sector</th>
+                    <th className="text-right py-3 px-4 text-sm font-semibold text-ti-navy dark:text-ti-dark-text">Assessments</th>
+                    <th className="text-right py-3 px-4 text-sm font-semibold text-ti-navy dark:text-ti-dark-text">Avg Score</th>
                   </tr>
                 </thead>
                 <tbody>
                   {sectorAvgs.map((sec) => (
-                    <tr key={sec.sector} className="border-b border-gray-50 hover:bg-gray-50">
-                      <td className="py-3 px-4 text-sm text-ti-gray">{getSectorLabel(sec.sector)}</td>
-                      <td className="py-3 px-4 text-sm text-ti-gray text-right">{sec.count}</td>
-                      <td className="py-3 px-4 text-right"><span className="text-sm font-bold text-ti-navy">{sec.averageScore}</span><span className="text-xs text-ti-gray">/100</span></td>
+                    <tr key={sec.sector} className="border-b border-ti-grey-mid/30 dark:border-ti-dark-border/30 hover:bg-gray-50 dark:hover:bg-ti-dark-bg">
+                      <td className="py-3 px-4 text-sm text-ti-text-muted dark:text-ti-dark-muted">{getSectorLabel(sec.sector)}</td>
+                      <td className="py-3 px-4 text-sm text-ti-text-muted dark:text-ti-dark-muted text-right">{sec.count}</td>
+                      <td className="py-3 px-4 text-right"><span className="text-sm font-bold text-ti-navy dark:text-ti-dark-text">{sec.averageScore}</span><span className="text-xs text-ti-text-muted dark:text-ti-dark-muted">/100</span></td>
                     </tr>
                   ))}
                 </tbody>

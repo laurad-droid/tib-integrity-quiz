@@ -2,18 +2,18 @@ import Link from 'next/link';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-ti-bg flex items-center justify-center px-4">
-      <div className="bg-white rounded-2xl shadow-lg p-8 sm:p-12 text-center max-w-md w-full">
+    <div className="min-h-screen bg-ti-bg dark:bg-ti-dark-bg flex items-center justify-center px-4">
+      <div className="bg-white dark:bg-ti-dark-card rounded-[4px] border border-ti-grey-mid dark:border-ti-dark-border shadow-lg p-8 sm:p-12 text-center max-w-md w-full">
         <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-ti-navy/5 mb-6">
-          <span className="text-4xl font-bold text-ti-navy">404</span>
+          <span className="text-4xl font-bold text-ti-navy dark:text-ti-dark-text">404</span>
         </div>
-        <h2 className="text-2xl font-bold text-ti-navy mb-3">Page Not Found</h2>
-        <p className="text-ti-gray mb-8 leading-relaxed">
+        <h2 className="text-2xl font-bold font-heading text-ti-navy dark:text-ti-dark-text mb-3">Page Not Found</h2>
+        <p className="text-ti-text-muted dark:text-ti-dark-muted mb-8 leading-relaxed">
           The page you are looking for does not exist or has been moved.
         </p>
         <Link
           href="/"
-          className="inline-flex items-center justify-center rounded-lg bg-ti-yellow px-8 py-3 text-base font-semibold text-ti-navy shadow-sm hover:bg-yellow-400 transition-colors"
+          className="inline-flex items-center justify-center rounded-[4px] bg-ti-red hover:bg-ti-red-dark px-8 py-3 text-base font-bold text-white uppercase tracking-wide shadow-sm transition-colors"
         >
           Back to Home
           <svg

@@ -33,15 +33,15 @@ export default function AnonymousResultsPage() {
 
   if (!result) {
     return (
-      <div className="min-h-screen bg-ti-bg flex items-center justify-center">
-        <div className="bg-white rounded-2xl shadow-lg p-8 text-center max-w-md">
-          <h1 className="text-2xl font-bold text-ti-navy mb-4">No Results Found</h1>
-          <p className="text-ti-gray mb-6">
+      <div className="min-h-screen bg-ti-bg dark:bg-ti-dark-bg flex items-center justify-center">
+        <div className="bg-white dark:bg-ti-dark-card rounded-[4px] border border-ti-grey-mid dark:border-ti-dark-border shadow-lg p-8 text-center max-w-md">
+          <h1 className="text-2xl font-bold font-heading text-ti-navy dark:text-ti-dark-text mb-4">No Results Found</h1>
+          <p className="text-ti-text-muted dark:text-ti-dark-muted mb-6">
             It looks like you haven&apos;t completed an assessment yet.
           </p>
           <Link
             href="/assessment"
-            className="inline-block bg-ti-yellow text-ti-navy font-bold py-3 px-8 rounded-lg hover:opacity-90"
+            className="inline-block bg-ti-red hover:bg-ti-red-dark text-white font-bold uppercase tracking-wide py-3 px-8 rounded-[4px] transition-colors"
           >
             Take the Assessment
           </Link>
@@ -65,7 +65,7 @@ export default function AnonymousResultsPage() {
   }));
 
   return (
-    <div className="min-h-screen bg-ti-bg">
+    <div className="min-h-screen bg-ti-bg dark:bg-ti-dark-bg">
       <div className="max-w-4xl mx-auto px-4 py-8 space-y-8">
         <ScoreHero score={result.totalScore} />
         <CPIComparisonChart userScore={result.totalScore} />
@@ -75,20 +75,20 @@ export default function AnonymousResultsPage() {
           recommendations={result.recommendations}
         />
 
-        <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-          <p className="text-ti-gray mb-4">
+        <div className="bg-white dark:bg-ti-dark-card rounded-[4px] border border-ti-grey-mid dark:border-ti-dark-border shadow-lg p-6 text-center">
+          <p className="text-ti-text-muted dark:text-ti-dark-muted mb-4">
             Want to save your results and track progress over time?
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Link
               href="/auth/register"
-              className="bg-ti-yellow text-ti-navy font-bold py-3 px-8 rounded-lg hover:opacity-90"
+              className="bg-ti-red hover:bg-ti-red-dark text-white font-bold uppercase tracking-wide py-3 px-8 rounded-[4px] transition-colors"
             >
               Create an Account
             </Link>
             <Link
               href="/assessment"
-              className="border-2 border-ti-navy text-ti-navy font-bold py-3 px-8 rounded-lg hover:bg-ti-navy hover:text-white transition-colors"
+              className="border-2 border-ti-navy text-ti-navy dark:text-ti-dark-text font-bold py-3 px-8 rounded-[4px] hover:bg-ti-navy hover:text-white transition-colors"
             >
               Retake Assessment
             </Link>

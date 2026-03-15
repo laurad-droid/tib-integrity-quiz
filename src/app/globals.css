@@ -7,6 +7,5 @@ html {
 }
 
 body {
-  background-color: #F8F9FA;
-  color: #002169;
+  @apply bg-ti-bg text-ti-text dark:bg-ti-dark-bg dark:text-ti-dark-text;
 }

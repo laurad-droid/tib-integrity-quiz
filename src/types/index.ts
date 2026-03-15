@@ -39,6 +39,10 @@ export interface Dimension {
   id: DimensionId;
   label: string;
   weight: number;
+  color: string;
+  icon: string;
+  description: string;
+  references: string[];
 }
 
 // CPI country score

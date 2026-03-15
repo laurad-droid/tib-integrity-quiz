@@ -10,20 +10,20 @@ function LoginForm() {
   const error = searchParams.get('error');
 
   return (
-    <div className="min-h-screen bg-ti-bg flex items-center justify-center px-4">
+    <div className="min-h-screen bg-ti-bg dark:bg-ti-dark-bg flex items-center justify-center px-4">
       <div className="w-full max-w-md">
-        <div className="bg-white rounded-lg shadow-md p-8">
+        <div className="bg-white dark:bg-ti-dark-card rounded-[4px] border border-ti-grey-mid dark:border-ti-dark-border shadow-md p-8">
           {/* Logo / Brand Area */}
           <div className="text-center mb-8">
-            <h1 className="text-2xl font-bold text-ti-navy">
+            <h1 className="text-2xl font-bold font-heading text-ti-navy dark:text-ti-dark-text">
               Transparency International Belgium
             </h1>
-            <p className="text-ti-gray mt-2 text-sm">
+            <p className="text-ti-text-muted dark:text-ti-dark-muted mt-2 text-sm">
               Integrity Self-Assessment Tool
             </p>
           </div>
 
-          <h2 className="text-xl font-semibold text-ti-navy mb-6 text-center">
+          <h2 className="text-xl font-semibold font-heading text-ti-navy dark:text-ti-dark-text mb-6 text-center">
             Sign In
           </h2>
 
@@ -39,7 +39,7 @@ function LoginForm() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-ti-navy mb-1"
+                className="block text-sm font-medium text-ti-navy dark:text-ti-dark-text mb-1"
               >
                 Email Address
               </label>
@@ -48,7 +48,7 @@ function LoginForm() {
                 name="email"
                 type="email"
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-ti-accent focus:border-transparent"
+                className="w-full px-3 py-2 border border-ti-grey-mid dark:border-ti-dark-border rounded-[4px] focus:outline-none focus:ring-2 focus:ring-ti-red focus:border-transparent bg-white dark:bg-ti-dark-bg dark:text-ti-dark-text"
                 placeholder="you@organization.com"
               />
             </div>
@@ -56,7 +56,7 @@ function LoginForm() {
             <div>
               <label
                 htmlFor="password"
-                className="block text-sm font-medium text-ti-navy mb-1"
+                className="block text-sm font-medium text-ti-navy dark:text-ti-dark-text mb-1"
               >
                 Password
               </label>
@@ -65,25 +65,25 @@ function LoginForm() {
                 name="password"
                 type="password"
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-ti-accent focus:border-transparent"
+                className="w-full px-3 py-2 border border-ti-grey-mid dark:border-ti-dark-border rounded-[4px] focus:outline-none focus:ring-2 focus:ring-ti-red focus:border-transparent bg-white dark:bg-ti-dark-bg dark:text-ti-dark-text"
                 placeholder="Enter your password"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full bg-ti-yellow text-ti-navy font-semibold py-2 px-4 rounded-md hover:bg-yellow-400 transition-colors focus:outline-none focus:ring-2 focus:ring-ti-accent focus:ring-offset-2"
+              className="w-full bg-ti-red hover:bg-ti-red-dark text-white font-bold uppercase tracking-wide py-2 px-4 rounded-[4px] transition-colors focus:outline-none focus:ring-2 focus:ring-ti-red focus:ring-offset-2"
             >
               Sign In
             </button>
           </form>
 
           {/* Registration Link */}
-          <p className="mt-6 text-center text-sm text-ti-gray">
+          <p className="mt-6 text-center text-sm text-ti-text-muted dark:text-ti-dark-muted">
             Don&apos;t have an account?{' '}
             <Link
               href="/auth/register"
-              className="text-ti-accent font-medium hover:underline"
+              className="text-ti-red dark:text-ti-navy-light font-medium hover:underline"
             >
               Register here
             </Link>
@@ -98,8 +98,8 @@ export default function LoginPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen bg-ti-bg flex items-center justify-center">
-          <div className="text-ti-gray">Loading...</div>
+        <div className="min-h-screen bg-ti-bg dark:bg-ti-dark-bg flex items-center justify-center">
+          <div className="text-ti-text-muted dark:text-ti-dark-muted">Loading...</div>
         </div>
       }
     >

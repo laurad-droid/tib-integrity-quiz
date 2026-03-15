@@ -9,8 +9,8 @@ export default function Error({
   reset: () => void;
 }) {
   return (
-    <div className="min-h-screen bg-ti-bg flex items-center justify-center px-4">
-      <div className="bg-white rounded-2xl shadow-lg p-8 sm:p-12 text-center max-w-md w-full">
+    <div className="min-h-screen bg-ti-bg dark:bg-ti-dark-bg flex items-center justify-center px-4">
+      <div className="bg-white dark:bg-ti-dark-card rounded-[4px] border border-ti-grey-mid dark:border-ti-dark-border shadow-lg p-8 sm:p-12 text-center max-w-md w-full">
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-score-red/10 mb-6">
           <svg
             className="w-8 h-8 text-score-red"
@@ -26,13 +26,13 @@ export default function Error({
             />
           </svg>
         </div>
-        <h2 className="text-2xl font-bold text-ti-navy mb-3">Something went wrong</h2>
-        <p className="text-ti-gray mb-8 leading-relaxed">
+        <h2 className="text-2xl font-bold font-heading text-ti-navy dark:text-ti-dark-text mb-3">Something went wrong</h2>
+        <p className="text-ti-text-muted dark:text-ti-dark-muted mb-8 leading-relaxed">
           An unexpected error occurred. Please try again or contact support if the problem persists.
         </p>
         <button
           onClick={() => reset()}
-          className="rounded-lg bg-ti-yellow px-8 py-3 text-base font-semibold text-ti-navy shadow-sm hover:bg-yellow-400 transition-colors"
+          className="rounded-[4px] bg-ti-red hover:bg-ti-red-dark px-8 py-3 text-base font-bold text-white uppercase tracking-wide shadow-sm transition-colors"
         >
           Try Again
         </button>

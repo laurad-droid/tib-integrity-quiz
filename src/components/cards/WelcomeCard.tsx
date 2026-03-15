@@ -7,10 +7,10 @@ interface WelcomeCardProps {
 export default function WelcomeCard({ onStart }: WelcomeCardProps) {
   return (
     <div className="text-center">
-      <h1 className="text-3xl font-bold text-ti-navy mb-4">
+      <h1 className="text-3xl font-heading font-bold text-ti-navy dark:text-ti-dark-text mb-4">
         Integrity Self-Assessment
       </h1>
-      <p className="text-ti-gray mb-6 leading-relaxed max-w-lg mx-auto">
+      <p className="text-ti-text-muted dark:text-ti-dark-muted mb-6 leading-relaxed max-w-lg mx-auto">
         This assessment evaluates your organisation&apos;s integrity policies and
         practices across six key dimensions. It takes approximately 15 minutes to
         complete and consists of 30 questions. At the end, you will receive a
@@ -19,7 +19,7 @@ export default function WelcomeCard({ onStart }: WelcomeCardProps) {
       </p>
       <button
         onClick={onStart}
-        className="bg-ti-yellow text-ti-navy font-bold py-3 px-8 rounded-lg hover:opacity-90 transition-opacity"
+        className="bg-ti-red hover:bg-ti-red-dark text-white font-bold py-3 px-8 rounded-[4px] uppercase tracking-wide transition-colors"
       >
         Start Assessment
       </button>

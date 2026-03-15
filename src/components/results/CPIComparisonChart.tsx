@@ -76,14 +76,14 @@ export default function CPIComparisonChart({ userScore }: CPIComparisonChartProp
   const getBarColor = (type: string) => {
     switch (type) {
       case 'user': return '#FFCD00';
-      case 'belgium': return '#002169';
-      default: return '#636466';
+      case 'belgium': return '#003087';
+      default: return '#5A5A72';
     }
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6">
-      <p className="text-sm text-ti-gray mb-4">
+    <div className="bg-white dark:bg-ti-dark-card rounded-[4px] border border-ti-grey-mid dark:border-ti-dark-border shadow-lg p-6">
+      <p className="text-sm text-ti-text-muted dark:text-ti-dark-muted mb-4">
         Your score compared to EU Corruption Perceptions Index (CPI) scores
       </p>
       <div className="w-full" style={{ height: `${chartData.length * 40 + 60}px`, minHeight: '400px' }}>
@@ -94,13 +94,13 @@ export default function CPIComparisonChart({ userScore }: CPIComparisonChartProp
             <YAxis type="category" dataKey="name" width={90} tick={{ fontSize: 13 }} />
             <Tooltip
               formatter={(value) => [`${value}/100`, 'Score']}
-              contentStyle={{ borderRadius: '8px', border: '1px solid #e5e7eb' }}
+              contentStyle={{ borderRadius: '4px', border: '1px solid #e5e7eb' }}
             />
             <ReferenceLine
               x={euAverage}
-              stroke="#004C97"
+              stroke="#003087"
               strokeDasharray="5 5"
-              label={{ value: `EU Avg: ${euAverage}`, position: 'top', fill: '#004C97', fontSize: 12 }}
+              label={{ value: `EU Avg: ${euAverage}`, position: 'top', fill: '#003087', fontSize: 12 }}
             />
             <Bar dataKey="score" radius={[0, 4, 4, 0]} barSize={24}>
               {chartData.map((entry, index) => (
@@ -108,7 +108,7 @@ export default function CPIComparisonChart({ userScore }: CPIComparisonChartProp
                   key={`cell-${index}`}
                   fill={getBarColor(entry.type)}
                   opacity={entry.type === 'user' ? 1 : 0.85}
-                  stroke={entry.type === 'user' ? '#002169' : 'none'}
+                  stroke={entry.type === 'user' ? '#003087' : 'none'}
                   strokeWidth={entry.type === 'user' ? 2 : 0}
                 />
               ))}
@@ -116,21 +116,21 @@ export default function CPIComparisonChart({ userScore }: CPIComparisonChartProp
           </BarChart>
         </ResponsiveContainer>
       </div>
-      <div className="flex items-center gap-6 mt-4 text-xs text-ti-gray justify-center">
+      <div className="flex items-center gap-6 mt-4 text-xs text-ti-text-muted dark:text-ti-dark-muted justify-center">
         <div className="flex items-center gap-1.5">
           <span className="inline-block w-3 h-3 rounded-sm" style={{ backgroundColor: '#FFCD00' }} />
           Your Score
         </div>
         <div className="flex items-center gap-1.5">
-          <span className="inline-block w-3 h-3 rounded-sm" style={{ backgroundColor: '#002169' }} />
+          <span className="inline-block w-3 h-3 rounded-sm" style={{ backgroundColor: '#003087' }} />
           Belgium
         </div>
         <div className="flex items-center gap-1.5">
-          <span className="inline-block w-3 h-3 rounded-sm" style={{ backgroundColor: '#636466' }} />
+          <span className="inline-block w-3 h-3 rounded-sm" style={{ backgroundColor: '#5A5A72' }} />
           Other EU Countries
         </div>
         <div className="flex items-center gap-1.5">
-          <span className="inline-block w-3 h-0 border-t-2 border-dashed" style={{ borderColor: '#004C97' }} />
+          <span className="inline-block w-3 h-0 border-t-2 border-dashed" style={{ borderColor: '#003087' }} />
           EU Average
         </div>
       </div>

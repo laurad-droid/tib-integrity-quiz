@@ -26,12 +26,12 @@ export default function ActionPlan({ recommendations, dimensionScores }: ActionP
 
   if (dimensionsWithRecs.length === 0) {
     return (
-      <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
+      <div className="bg-white dark:bg-ti-dark-card rounded-[4px] border border-ti-grey-mid dark:border-ti-dark-border shadow-lg p-8 text-center">
         <div className="text-4xl mb-4">&#127942;</div>
-        <h3 className="text-xl font-bold text-ti-navy mb-2">
+        <h3 className="text-xl font-bold font-heading text-ti-navy dark:text-ti-dark-text mb-2">
           Excellent work!
         </h3>
-        <p className="text-ti-gray">
+        <p className="text-ti-text-muted dark:text-ti-dark-muted">
           All your dimensions scored 60 or above. Your organisation demonstrates
           a solid foundation across all integrity areas. Continue monitoring and
           improving your practices to maintain this strong posture.
@@ -45,10 +45,10 @@ export default function ActionPlan({ recommendations, dimensionScores }: ActionP
       {dimensionsWithRecs.map((ds) => (
         <div
           key={ds.dimensionId}
-          className={`bg-white rounded-2xl shadow-lg p-6 border-l-4 ${getScoreBorderColor(ds.score)}`}
+          className={`bg-white dark:bg-ti-dark-card rounded-[4px] border border-ti-grey-mid dark:border-ti-dark-border shadow-lg p-6 border-l-4 ${getScoreBorderColor(ds.score)}`}
         >
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-bold text-ti-navy">
+            <h3 className="text-lg font-bold font-heading text-ti-navy dark:text-ti-dark-text">
               {ds.label}
             </h3>
             <span className={`text-2xl font-bold ${getScoreColor(ds.score)}`}>
@@ -58,8 +58,8 @@ export default function ActionPlan({ recommendations, dimensionScores }: ActionP
           <ul className="space-y-3">
             {recommendations[ds.dimensionId].map((rec, index) => (
               <li key={index} className="flex items-start gap-3">
-                <span className="mt-1.5 flex-shrink-0 w-2 h-2 rounded-full bg-ti-accent" />
-                <span className="text-ti-gray text-sm leading-relaxed">
+                <span className="mt-1.5 flex-shrink-0 w-2 h-2 rounded-full bg-ti-red" />
+                <span className="text-ti-text-muted dark:text-ti-dark-muted text-sm leading-relaxed">
                   {rec}
                 </span>
               </li>

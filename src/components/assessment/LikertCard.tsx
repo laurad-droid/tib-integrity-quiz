@@ -11,7 +11,7 @@ interface CardProps {
 export default function LikertCard({ question, selectedValue, onAnswer }: CardProps) {
   return (
     <div>
-      <h2 className="text-lg font-semibold text-ti-navy mb-6 leading-relaxed">
+      <h2 className="text-lg font-semibold text-ti-text dark:text-ti-dark-text mb-6 leading-relaxed">
         {question.text}
       </h2>
       <div className="flex flex-wrap gap-2 justify-center">
@@ -19,11 +19,10 @@ export default function LikertCard({ question, selectedValue, onAnswer }: CardPr
           <button
             key={option.value}
             onClick={() => onAnswer(option.value, option.points)}
-            className={`flex-1 min-w-[100px] py-3 px-2 rounded-lg border-2 text-sm font-medium transition-all duration-200 ${
-              selectedValue === option.value
-                ? 'bg-ti-yellow border-ti-yellow text-ti-navy'
-                : 'bg-white border-gray-200 text-ti-gray hover:border-ti-accent hover:text-ti-accent'
-            }`}
+            className={selectedValue === option.value
+              ? 'flex-1 min-w-[100px] py-3 px-2 rounded-[4px] border-2 text-sm font-medium transition-all duration-200 bg-ti-yellow border-ti-yellow text-ti-navy'
+              : 'flex-1 min-w-[100px] py-3 px-2 rounded-[4px] border-2 text-sm font-medium transition-all duration-200 bg-white dark:bg-ti-dark-bg border-ti-grey-mid dark:border-ti-dark-border text-ti-text-muted dark:text-ti-dark-muted hover:border-ti-red dark:hover:border-ti-red hover:text-ti-red dark:hover:text-ti-red'
+            }
           >
             {option.label}
           </button>

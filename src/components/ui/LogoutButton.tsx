@@ -19,7 +19,7 @@ export default function LogoutButton() {
     <button
       onClick={handleLogout}
       disabled={loading}
-      className="text-ti-gray hover:text-ti-navy text-sm font-medium transition-colors disabled:opacity-50"
+      className="text-ti-text-muted dark:text-ti-dark-muted hover:text-ti-navy dark:hover:text-ti-dark-text text-sm font-medium transition-colors disabled:opacity-50"
     >
       {loading ? 'Signing out...' : 'Sign Out'}
     </button>

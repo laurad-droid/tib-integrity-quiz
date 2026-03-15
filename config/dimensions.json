@@ -1,8 +1,80 @@
 [
-  { "id": "leadership", "label": "Leadership & Governance", "weight": 0.20 },
-  { "id": "anticorruption", "label": "Anti-corruption Policies", "weight": 0.20 },
-  { "id": "transparency", "label": "Transparency & Disclosure", "weight": 0.18 },
-  { "id": "whistleblower", "label": "Whistleblower Protection", "weight": 0.17 },
-  { "id": "accountability", "label": "Accountability & Oversight", "weight": 0.15 },
-  { "id": "stakeholder", "label": "Stakeholder Engagement", "weight": 0.10 }
+  {
+    "id": "leadership",
+    "label": "Leadership & Governance",
+    "weight": 0.20,
+    "color": "#003087",
+    "icon": "shield-check",
+    "description": "Integrity starts at the top. This dimension evaluates whether senior leadership sets a clear ethical tone, embeds integrity into governance structures, and actively champions a culture of accountability throughout the organisation.",
+    "references": [
+      "OECD Principle 1: Commitment and leadership",
+      "ISO 37001 Clause 5: Leadership",
+      "TI CPI governance indicators"
+    ]
+  },
+  {
+    "id": "anticorruption",
+    "label": "Anti-corruption Policies",
+    "weight": 0.20,
+    "color": "#E8001C",
+    "icon": "document-check",
+    "description": "Robust anti-corruption policies are the backbone of organisational integrity. This dimension assesses the strength, scope, and implementation of your anti-bribery frameworks, risk assessments, and due diligence processes.",
+    "references": [
+      "ISO 37001:2016 Anti-Bribery Management Systems",
+      "OECD Anti-Bribery Convention",
+      "Belgium CPI 69/100"
+    ]
+  },
+  {
+    "id": "transparency",
+    "label": "Transparency & Disclosure",
+    "weight": 0.18,
+    "color": "#16A34A",
+    "icon": "eye",
+    "description": "Public trust depends on openness. This dimension measures how proactively your organisation discloses financial data, procurement processes, and decision-making to stakeholders and the public.",
+    "references": [
+      "Open Contracting Data Standard",
+      "OECD Transparency Indicators",
+      "EU Anti-Money Laundering Directive"
+    ]
+  },
+  {
+    "id": "whistleblower",
+    "label": "Whistleblower Protection",
+    "weight": 0.17,
+    "color": "#EAB308",
+    "icon": "megaphone",
+    "description": "Safe reporting channels are essential for uncovering misconduct. This dimension evaluates your organisation's whistleblower protections, anonymous reporting mechanisms, and investigation procedures.",
+    "references": [
+      "EU Directive 2019/1937 (Whistleblower Protection)",
+      "ISO 37002:2021 Whistleblowing Management Systems",
+      "TI whistleblower guidance"
+    ]
+  },
+  {
+    "id": "accountability",
+    "label": "Accountability & Oversight",
+    "weight": 0.15,
+    "color": "#F97316",
+    "icon": "clipboard-check",
+    "description": "Effective detection and remediation systems close the integrity loop. This dimension examines your audit capabilities, disciplinary consistency, compliance monitoring, and corrective action processes.",
+    "references": [
+      "OECD Accountability Guidelines",
+      "ISO 37001 Clause 9: Performance Evaluation",
+      "TI Integrity Pacts"
+    ]
+  },
+  {
+    "id": "stakeholder",
+    "label": "Stakeholder Engagement",
+    "weight": 0.10,
+    "color": "#5A5A72",
+    "icon": "users",
+    "description": "Diverse perspectives strengthen integrity outcomes. This dimension assesses how meaningfully your organisation engages civil society, communities, and external stakeholders in shaping and monitoring integrity policies.",
+    "references": [
+      "OECD Open Government Partnership",
+      "TI Global Integrity Pacts",
+      "EU Participatory Governance Framework"
+    ]
+  }
 ]

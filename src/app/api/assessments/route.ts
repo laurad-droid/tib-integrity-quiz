@@ -16,7 +16,7 @@ export async function POST(request: Request) {
 
   const { answers } = await request.json();
 
-  // Calculate scores (works for both authenticated and anonymous users)
+  // Calculate scores
   const responseInputs = answers.map((a: { questionId: string; points: number }) => ({
     question_id: a.questionId,
     points_earned: a.points,
@@ -34,52 +34,41 @@ export async function POST(request: Request) {
     dimensionScoresObj[ds.dimensionId] = ds.score;
   });
 
-  // If user is logged in, save to database
-  if (user) {
-    const { data: assessment, error: assessmentError } = await supabase
-      .from('assessments')
-      .insert({ user_id: user.id })
-      .select()
-      .single();
+  // Save to database for ALL users (authenticated and anonymous)
+  const { data: assessment, error: assessmentError } = await supabase
+    .from('assessments')
+    .insert({ user_id: user?.id || null })
+    .select()
+    .single();
 
-    if (assessmentError) {
-      return NextResponse.json({ error: assessmentError.message }, { status: 500 });
-    }
-
-    const responses = answers.map((a: { questionId: string; value: number; points: number }) => ({
-      assessment_id: assessment.id,
-      question_id: a.questionId,
-      answer_value: String(a.value),
-      points_earned: a.points,
-    }));
-
-    const { error: responsesError } = await supabase
-      .from('responses')
-      .insert(responses);
-
-    if (responsesError) {
-      return NextResponse.json({ error: responsesError.message }, { status: 500 });
-    }
-
-    await supabase
-      .from('assessments')
-      .update({
-        total_score: result.totalScore,
-        dimension_scores: dimensionScoresObj,
-        completed_at: new Date().toISOString(),
-      })
-      .eq('id', assessment.id);
-
-    return NextResponse.json({ assessmentId: assessment.id });
+  if (assessmentError) {
+    return NextResponse.json({ error: assessmentError.message }, { status: 500 });
   }
 
-  // Anonymous user: return results directly (no database save)
-  return NextResponse.json({
-    anonymous: true,
-    result: {
-      totalScore: result.totalScore,
-      dimensionScores: result.dimensionScores,
-      recommendations: result.recommendations,
-    },
-  });
+  const responses = answers.map((a: { questionId: string; value: number; points: number }) => ({
+    assessment_id: assessment.id,
+    question_id: a.questionId,
+    answer_value: String(a.value),
+    points_earned: a.points,
+  }));
+
+  const { error: responsesError } = await supabase
+    .from('responses')
+    .insert(responses);
+
+  if (responsesError) {
+    return NextResponse.json({ error: responsesError.message }, { status: 500 });
+  }
+
+  await supabase
+    .from('assessments')
+    .update({
+      total_score: result.totalScore,
+      dimension_scores: dimensionScoresObj,
+      completed_at: new Date().toISOString(),
+    })
+    .eq('id', assessment.id);
+
+  // Always return assessmentId — both auth and anonymous get a permalink
+  return NextResponse.json({ assessmentId: assessment.id });
 }

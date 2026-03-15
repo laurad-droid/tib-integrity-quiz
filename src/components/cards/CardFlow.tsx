@@ -96,9 +96,6 @@ export default function CardFlow() {
 
       if (data.assessmentId) {
         window.location.href = '/results/' + data.assessmentId;
-      } else if (data.anonymous && data.result) {
-        sessionStorage.setItem('anonymousResult', JSON.stringify(data.result));
-        window.location.href = '/results/anonymous';
       } else {
         throw new Error('Unexpected response from server');
       }
